@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="docs/assets/logo-256.png" alt="Prism logo" width="128">
+
 # Prism · Sims 4 Manager
 
 **A free, open-source mod and custom-content manager for The Sims 4: visual, careful, and honest about what it knows.**
