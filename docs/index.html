@@ -184,6 +184,9 @@
       <div class="feature"><div class="ico"><span style="--m:url(assets/icons/wand-sparkles.svg);--c:var(--violet)"></span></div><h3>Sort Manager</h3><p>Organization driven by package contents. Named sets, script releases and overrides stay together, and every move can be undone.</p></div>
       <div class="feature"><div class="ico"><span style="--m:url(assets/icons/heart-pulse.svg);--c:var(--magenta)"></span></div><h3>Health &amp; error logs</h3><p>Find files the game won't load, resources several mods compete for, and the installed mods named in your exception reports.</p></div>
       <div class="feature"><div class="ico"><span style="--m:url(assets/icons/layers.svg)"></span></div><h3>Exact duplicates</h3><p>Byte-identical copies, confirmed with SHA-256. Extra copies move to a vault, never straight to deletion.</p></div>
+      <div class="feature"><div class="ico"><span style="--m:url(assets/icons/puzzle.svg);--c:var(--green)"></span></div><h3>Missing requirements</h3><p>Frameworks your scripts import, mods and packs creators declare as required, and missing meshes. Each comes with its official source, and Prism gets it for you where the site allows.</p></div>
+      <div class="feature"><div class="ico"><span style="--m:url(assets/icons/wand-sparkles.svg);--c:var(--magenta)"></span></div><h3>Mod Doctor</h3><p>A script mod broke after a game update? Prism finds out why and gets a small, separate, safety-checked fix written, which you install with one approval and can undo any time.</p></div>
+      <div class="feature"><div class="ico"><span style="--m:url(assets/icons/box.svg);--c:var(--violet)"></span></div><h3>Build/Buy by catalog</h3><p>Seating, lighting, plumbing, decor: Build/Buy folders follow the game's own catalog categories, read from inside each object.</p></div>
     </div>
   </div>
 </section>
@@ -218,12 +221,12 @@
     </div>
     <div class="panel">
       <div class="ico"><span style="--m:url(assets/icons/sparkles.svg);--c:var(--magenta)"></span></div>
-      <h3>An assistant that can't break anything</h3>
-      <p>The optional AI assistant answers questions about your real collection: what's installed, what's crashing, what would be organized.</p>
+      <h3>Bring your own AI, or none</h3>
+      <p>AI is optional. The assistant answers questions about your real collection; agents and stronger models can draft Mod Doctor fixes.</p>
       <ul>
-        <li>Works with local models (LM Studio, Ollama, llama.cpp) or your own cloud keys.</li>
-        <li>Read-only: it suggests the right screen and every change stays yours to approve.</li>
-        <li>Adapts to small local models with focused, evidence-first questions.</li>
+        <li>Local models (LM Studio, Ollama, llama.cpp, vLLM), your own cloud keys, or agents like Claude Code and Codex.</li>
+        <li>The assistant is read-only. Agents can change files only after you turn on reviewed agent changes and approve the exact plan.</li>
+        <li>Honest about limits: fixes from small local models are often wrong. Prism rejects what it can detect and recommends stronger models for code.</li>
       </ul>
     </div>
   </div>
@@ -242,16 +245,19 @@
         <li>Mod Browser, Collections and Loadouts</li>
         <li>Sort Manager, Collection Health, error-log analysis</li>
         <li>Downloads with source tracking; Nexus Mods integration</li>
-        <li>Duplicate finder and AI assistant</li></ul></div>
+        <li>Duplicate finder and AI assistant</li>
+        <li>Missing requirements and missing meshes, with fetching from official sources</li>
+        <li>Mod Doctor compatibility fixes</li>
+        <li>Build/Buy subcategories from catalog data</li></ul></div>
       <div class="col"><h3><i class="dot" style="background:var(--amber)"></i>In progress</h3><ul>
-        <li>Build/Buy subcategories from catalog data</li>
-        <li>Testing local AI models across hardware</li>
+        <li>Guided collection checkup with one-click fixes</li>
+        <li>Quarantine for problem files</li>
+        <li>Theme and appearance options</li>
         <li>CurseForge integration (pending approval)</li>
         <li>Polish, accessibility and performance</li></ul></div>
       <div class="col"><h3><i class="dot" style="background:var(--violet)"></i>Next</h3><ul>
         <li>Windows installer and first public release</li>
         <li>Thumbnail Studio for missing previews (clearly labelled when generated)</li>
-        <li>Theme and appearance options</li>
         <li>More platform integrations</li></ul></div>
     </div>
   </div>
@@ -287,6 +293,9 @@
     ['downloads', 'Downloads', 'Bring in mods from where creators share them, with where each file came from.'],
     ['assistant', 'AI Assistant', 'Read-only help that looks at your real collection before answering.'],
     ['tools', 'Tools & Utilities', 'Inspectors, maintenance and the external apps you already use.'],
+    ['mod-doctor', 'Mod Doctor', 'A broken script mod, explained in plain language, with a fix you approve once and can undo.'],
+    ['requirements', 'Requirements', 'What your mods need but don\'t have, and where to get it.'],
+    ['models', 'AI & Models', 'Local models that fit your PC, with results measured on real hardware.'],
   ];
   const tabs = document.getElementById('tabs'), img = document.getElementById('shot'), cap = document.getElementById('caption');
   function show(i) {
