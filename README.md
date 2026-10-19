@@ -18,6 +18,8 @@
 
 Prism helps you install, browse, organize and troubleshoot large Sims 4 collections (tested on 43,000+ files) without guessing and without risking your Mods folder.
 
+- **Checkup.** One screen that tells you what's wrong with your collection in plain language, most important first, each with one fix button. It covers broken files, files too deep in folders for the game to load, script mods that stopped working, missing requirements, CAS items that will be invisible, duplicates, and fixes to confirm after playing. Every fix can be undone.
+- **Set Aside.** Take problem files out of the game without deleting them. Prism keeps the reason, and you can put them back any time. Deleting is your choice alone: files go to the Windows Recycle Bin, and the assistant and agents can never delete anything.
 - **Safe installs and updates.** Downloads are staged and analyzed first. You review exactly which files move and which versions are replaced, then Prism installs them as one transaction that you can undo, and that recovers safely after a crash or power loss. Prism never overwrites a file.
 - **Evidence over filenames.** Prism reads what is inside each package (resource types, CAS body types, embedded thumbnails and script versions) instead of trusting names. Shared resources are reported as candidates to review, never presumed conflicts.
 - **Mod Browser.** A fast visual gallery of everything installed, with embedded previews, categories, folders, suggested sets, and per-file details.
@@ -30,6 +32,7 @@ Prism helps you install, browse, organize and troubleshoot large Sims 4 collecti
   - CAS items whose mesh is missing.
 
   For each one it names the official source. It downloads through official APIs where a site allows it; otherwise it opens the creator's page and watches your Downloads folder. It checks that the file really provides what was missing, then installs it through the same reviewed, undoable flow.
+- **Game update impact.** Prism records the game's own functions for each game version. After an update, it lists the script mods whose code uses functions that changed or disappeared, before you launch. This is a prediction, not a verdict, and it starts working from the first game update after Prism is installed.
 - **Mod Doctor.** When a game update breaks a script mod, Prism reads the game's error reports and the mod's compiled code (without running it). An AI model or agent writes a small, separate compatibility fix. Prism checks it before you see it: no file, network or process access, no hiding errors, no invented code. One approval installs it into `Mods/Prism Patches`. The original mod is never changed, you can undo the fix any time, and an official update from the creator is still the best fix.
 - **Downloads and sources.** Prism records where each download came from and checks those sources for newer files where the site allows it. It uses Nexus Mods through its official API with your own key, reads public Mod The Sims pages only when you ask, and works with your browser for everything else. CurseForge support is waiting on API approval. Prism never bypasses logins, captchas, paywalls or site rules.
 - **Exact Duplicate Finder.** Byte-identical copies, confirmed with SHA-256. Extra copies go to a vault, never to the recycle bin.
@@ -46,6 +49,7 @@ Prism helps you install, browse, organize and troubleshoot large Sims 4 collecti
 | ![Move History](docs/screenshots/history.png) **Move History**: every change recorded, undoable and recoverable | ![Downloads](docs/screenshots/downloads.png) **Downloads**: sources and where each file came from |
 | ![AI Assistant](docs/screenshots/assistant.png) **AI Assistant**: read-only help with real tools | ![Tools](docs/screenshots/tools.png) **Tools & Utilities**: inspectors, maintenance and external apps |
 | ![Mod Doctor](docs/screenshots/mod-doctor.png) **Mod Doctor**: a broken script mod, explained in plain language with one-click options | ![Requirements](docs/screenshots/requirements.png) **Missing requirements**: what your mods need and where to get it |
+| ![Checkup](docs/screenshots/checkup.png) **Checkup**: what's wrong, in plain language, with one-click fixes | ![Set Aside](docs/screenshots/set-aside.png) **Set Aside**: problem files out of the game, kept with the reason, undoable |
 | ![Local models](docs/screenshots/models.png) **AI & Models**: tested local models that fit your PC | |
 
 Screenshots show a small demo collection. Custom content shown belongs to its creators. The broken "DemoCreator" mods in the Mod Doctor and Requirements screenshots are made-up examples.
@@ -60,7 +64,7 @@ Screenshots show a small demo collection. Custom content shown belongs to its cr
 
 ## Status
 
-Prism runs on Windows with Python and Qt (PySide6 / Qt Quick). It is being built and tested against real collections. Planned before the first public release: a guided collection checkup with one-click fixes, quarantine for problem files, a Windows installer, Thumbnail Studio for missing previews, theme options, and broader platform integrations.
+Prism runs on Windows with Python and Qt (PySide6 / Qt Quick). It is being built and tested against real collections. Planned before the first public release: an opt-in in-game probe that shows which mod changes which game behaviour, automated "50/50" troubleshooting driven by evidence instead of guesswork, a Windows installer, Thumbnail Studio for missing previews, theme options, and broader platform integrations.
 
 ## License
 
