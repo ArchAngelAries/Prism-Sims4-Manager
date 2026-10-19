@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prism · Sims 4 Manager</title>
+<meta name="description" content="Prism is a free, open-source mod and custom-content manager for The Sims 4: safe installs with undo, evidence from inside your packages, collections, loadouts and an optional read-only AI assistant.">
+<meta property="og:title" content="Prism · Sims 4 Manager">
+<meta property="og:description" content="A free, open-source Sims 4 mod manager: visual, careful, and honest about what it knows.">
+<meta property="og:image" content="https://archangelaries.github.io/Prism-Sims4-Manager/screenshots/dashboard.png">
+<style>
+  :root { --bg:#060a18; --surface:#0c1228; --raised:#121a36; --border:#22305c; --text:#e8ebf7; --muted:#98a2c3;
+          --violet:#8b5cf6; --magenta:#d946ef; --cyan:#22d3ee; }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 "Segoe UI", Inter, system-ui, sans-serif; }
+  a { color:var(--cyan); }
+  .wrap { max-width:1120px; margin:0 auto; padding:0 20px; }
+  header { padding:72px 0 40px; text-align:center;
+           background:radial-gradient(ellipse at top, rgba(139,92,246,.35), transparent 60%); }
+  h1 { font-size:clamp(2.2rem,5vw,3.4rem); margin:0 0 8px; letter-spacing:.02em;
+       background:linear-gradient(90deg,var(--cyan),var(--violet),var(--magenta)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .tag { color:var(--muted); font-size:1.15rem; max-width:720px; margin:0 auto 24px; }
+  .badge { display:inline-block; padding:6px 14px; border:1px solid var(--border); border-radius:999px; color:var(--cyan); font-size:.9rem; }
+  .hero img { width:100%; border-radius:14px; border:1px solid var(--border); box-shadow:0 20px 60px rgba(139,92,246,.25); margin-top:32px; }
+  section { padding:48px 0; }
+  h2 { font-size:1.6rem; margin:0 0 20px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+  .card { background:var(--surface); border:1px solid var(--border); border-radius:14px; padding:18px 20px; }
+  .card h3 { margin:0 0 6px; font-size:1.05rem; color:var(--text); }
+  .card p { margin:0; color:var(--muted); font-size:.95rem; }
+  .shots { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:18px; }
+  figure { margin:0; background:var(--surface); border:1px solid var(--border); border-radius:14px; overflow:hidden; }
+  figure img { width:100%; display:block; }
+  figcaption { padding:10px 14px; color:var(--muted); font-size:.9rem; }
+  footer { border-top:1px solid var(--border); padding:28px 0 40px; color:var(--muted); font-size:.85rem; }
+  @media (max-width:600px) { header { padding-top:48px; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap hero">
+    <h1>Prism · Sims 4 Manager</h1>
+    <p class="tag">A free, open-source mod and custom-content manager for The Sims 4: visual, careful, and honest about what it knows.</p>
+    <span class="badge">In active development · source code coming with the first public release</span>
+    <img src="screenshots/dashboard.png" alt="Prism dashboard showing collection overview, health and recent activity">
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>What Prism does</h2>
+    <div class="grid">
+      <div class="card"><h3>Safe installs &amp; updates</h3><p>Review exactly what moves and what gets replaced, then install as one transaction you can undo, with recovery after crashes or power loss. Prism never overwrites a file.</p></div>
+      <div class="card"><h3>Evidence over filenames</h3><p>Prism reads what is inside each package (resource types, CAS body types, previews, script versions) instead of trusting names.</p></div>
+      <div class="card"><h3>Mod Browser</h3><p>A fast visual gallery of 40,000+ files with embedded previews, categories, folders and suggested sets.</p></div>
+      <div class="card"><h3>Collections &amp; loadouts</h3><p>Group related content and switch gameplay loadouts in one undoable step. Nothing is deleted.</p></div>
+      <div class="card"><h3>Sort Manager</h3><p>Organization driven by package contents, previewed first. Named sets and script releases stay together.</p></div>
+      <div class="card"><h3>Health &amp; error logs</h3><p>Find files the game won't load, contested resources, and the mods that appear in exception reports.</p></div>
+      <div class="card"><h3>Sources &amp; updates</h3><p>Prism tracks where each download came from, uses official APIs like Nexus Mods with your key, and never bypasses site rules.</p></div>
+      <div class="card"><h3>Optional AI assistant</h3><p>Use local models or your own cloud keys. The assistant only reads your collection, and every change stays yours to approve.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Screenshots</h2>
+    <div class="shots">
+      <figure><img src="screenshots/staging.png" alt="Staging and install screen"><figcaption>Staging / Install: review before anything moves</figcaption></figure>
+      <figure><img src="screenshots/browser.png" alt="Mod Browser gallery"><figcaption>Mod Browser: embedded previews and categories</figcaption></figure>
+      <figure><img src="screenshots/collections.png" alt="Collections and loadouts"><figcaption>Collections &amp; Loadouts</figcaption></figure>
+      <figure><img src="screenshots/health.png" alt="Collection Health"><figcaption>Collection Health: evidence from inside packages</figcaption></figure>
+      <figure><img src="screenshots/history.png" alt="Move History"><figcaption>Move History: undo and crash recovery</figcaption></figure>
+      <figure><img src="screenshots/downloads.png" alt="Downloads"><figcaption>Downloads: sources and provenance</figcaption></figure>
+      <figure><img src="screenshots/assistant.png" alt="AI Assistant"><figcaption>AI Assistant: read-only, approval-first</figcaption></figure>
+      <figure><img src="screenshots/sort.png" alt="Sort Manager"><figcaption>Sort Manager: previewable, undoable organization</figcaption></figure>
+      <figure><img src="screenshots/tools.png" alt="Tools and utilities"><figcaption>Tools &amp; Utilities</figcaption></figure>
+    </div>
+    <p style="color:var(--muted);font-size:.9rem">Screenshots show a small demo collection. Custom content shown belongs to its creators.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Free and open source</h2>
+    <p>Prism is free software under the GNU General Public License v3.0 or later, with no paid tiers. Copies and modified versions must keep the attribution “Based on Prism Sims 4 Manager by ArchAngelAries and Prism contributors.” Questions and feedback: <a href="https://github.com/ArchAngelAries/Prism-Sims4-Manager/issues">GitHub Issues</a> · <a href="https://github.com/ArchAngelAries/Prism-Sims4-Manager">Repository</a></p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">Prism is a fan-made tool. It is not affiliated with, endorsed by, or sponsored by Electronic Arts or Maxis. The Sims is a trademark of Electronic Arts Inc. Mod platform names belong to their respective owners.</div>
+</footer>
+</body>
+</html>
