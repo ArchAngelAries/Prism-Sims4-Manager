@@ -183,7 +183,10 @@
       <div class="feature"><div class="ico"><span style="--m:url(assets/icons/box.svg)"></span></div><h3>Evidence over filenames</h3><p>Prism reads what's inside each package (resource types, CAS body types, embedded previews, script versions), so a "hair" file that's really a hat is filed as a hat.</p></div>
       <div class="feature"><div class="ico"><span style="--m:url(assets/icons/folder-open.svg)"></span></div><h3>Mod Browser</h3><p>A fast visual gallery of everything you have installed, with real thumbnails, categories, folders, suggested sets and per-file details.</p></div>
       <div class="feature"><div class="ico"><span style="--m:url(assets/icons/library-big.svg);--c:var(--magenta)"></span></div><h3>Collections &amp; loadouts</h3><p>Group related content, then switch between gameplay loadouts in one undoable step. Nothing is ever deleted.</p></div>
-      <div class="feature"><div class="ico"><span style="--m:url(assets/icons/wand-sparkles.svg);--c:var(--violet)"></span></div><h3>Sort Manager</h3><p>Organization driven by package contents. Named sets, script releases and overrides stay together, and every move can be undone.</p></div>
+      <div class="feature"><div class="ico"><span style="--m:url(assets/icons/wand-sparkles.svg);--c:var(--violet)"></span></div><h3>Organize everything</h3><p>Your whole Mods folder in one clean layout: CAS, Build/Buy, Gameplay and Overrides (found by what a package replaces, not its name). Mods stay whole, your settings folders and deliberate choices stay put, no empty folders are left behind, and new installs land in the same layout. One undoable step.</p></div>
+      <div class="feature"><div class="ico"><span style="--m:url(assets/icons/package-plus.svg);--c:var(--green)"></span></div><h3>Sims &amp; lots without the mess</h3><p>Sim and lot downloads skip CC and sliders you already have, even under another name. If a bundled slider would replace yours, Prism asks: all, some, or none.</p></div>
+      <div class="feature"><div class="ico"><span style="--m:url(assets/icons/shield-check.svg);--c:var(--violet)"></span></div><h3>Big mods installed right</h3><p>Mods with their own layout, like Create-A-World and Better BuildBuy, are installed exactly as their creators require, and Prism warns about built-in conflicts.</p></div>
+      <div class="feature"><div class="ico"><span style="--m:url(assets/icons/sparkles.svg);--c:var(--magenta)"></span></div><h3>Pictures for everything</h3><p>Give a mod or collection your own picture, the one from its download page, or an AI-generated one (ComfyUI on your PC, OpenAI or Gemini), always labelled.</p></div>
       <div class="feature"><div class="ico"><span style="--m:url(assets/icons/heart-pulse.svg);--c:var(--magenta)"></span></div><h3>Health &amp; error logs</h3><p>Find files the game won't load, resources several mods compete for, and the installed mods named in your exception reports.</p></div>
       <div class="feature"><div class="ico"><span style="--m:url(assets/icons/layers.svg)"></span></div><h3>Exact duplicates</h3><p>Byte-identical copies, confirmed with SHA-256. Extra copies move to a vault, never straight to deletion.</p></div>
       <div class="feature"><div class="ico"><span style="--m:url(assets/icons/puzzle.svg);--c:var(--green)"></span></div><h3>Missing requirements</h3><p>Frameworks your scripts import, mods and packs creators declare as required, and missing meshes. Each comes with its official source, and Prism gets it for you where the site allows.</p></div>
@@ -228,6 +231,7 @@
       <ul>
         <li>Local models (LM Studio, Ollama, llama.cpp, vLLM), your own cloud keys, or agents like Claude Code and Codex.</li>
         <li>The assistant is read-only. Agents can change files only after you turn on reviewed agent changes and approve the exact plan.</li>
+        <li>Kept honest: answers come from your real collection, Prism's built-in guide and a final check, so even small local models don't invent features or claim to have changed files.</li>
         <li>Honest about limits: fixes from small local models are often wrong. Prism rejects what it can detect and recommends stronger models for code.</li>
       </ul>
     </div>
@@ -243,26 +247,25 @@
     </div>
     <div class="road">
       <div class="col"><h3><i class="dot" style="background:var(--green)"></i>Working now</h3><ul>
-        <li>Staging, release analysis and transactional installs with undo</li>
-        <li>Mod Browser, Collections and Loadouts</li>
-        <li>Sort Manager, Collection Health, error-log analysis</li>
-        <li>Downloads with source tracking; Nexus Mods integration</li>
-        <li>Duplicate finder and AI assistant</li>
-        <li>Missing requirements and missing meshes, with fetching from official sources</li>
-        <li>Mod Doctor compatibility fixes</li>
-        <li>Build/Buy subcategories from catalog data</li>
+        <li>Installs and updates with undo, straight into your layout</li>
+        <li>Organize the whole Mods folder, tested on a real 43,000-file collection</li>
+        <li>Sim and lot downloads that keep your CC and sliders intact</li>
         <li>Checkup with one-click fixes, and Set Aside for problem files</li>
-        <li>Game update impact: which mods an update may break, before you launch</li></ul></div>
+        <li>Mod Browser, Collections, Loadouts and pictures</li>
+        <li>Missing requirements, Mod Doctor and game update impact</li>
+        <li>Opt-in in-game probe: which script mods really loaded</li>
+        <li>Downloads with source tracking; Nexus Mods integration</li>
+        <li>AI assistant (local or cloud) and agent tools for every feature</li></ul></div>
       <div class="col"><h3><i class="dot" style="background:var(--amber)"></i>In progress</h3><ul>
-        <li>Opt-in in-game probe: which mod changes which game behaviour</li>
-        <li>Evidence-driven automatic "50/50" troubleshooting</li>
-        <li>Theme and appearance options</li>
+        <li>Evidence-driven "find the culprit" troubleshooting</li>
+        <li>Main-menu probe and interface-override checks</li>
+        <li>More layout choices (simple, granular, keep mine)</li>
         <li>CurseForge integration (pending approval)</li>
-        <li>Polish, accessibility and performance</li></ul></div>
+        <li>Speed: faster first checks on huge collections</li></ul></div>
       <div class="col"><h3><i class="dot" style="background:var(--violet)"></i>Next</h3><ul>
         <li>Windows installer and first public release</li>
-        <li>Thumbnail Studio for missing previews (clearly labelled when generated)</li>
-        <li>More platform integrations</li></ul></div>
+        <li>Previews for CC that ships without one</li>
+        <li>Animated, polished look</li></ul></div>
     </div>
   </div>
 </section>
@@ -288,11 +291,12 @@
 
 <script>
   const shots = [
-    ['staging', 'Staging / Install', 'Review releases, versions and replacements before anything moves.'],
-    ['browser', 'Mod Browser', 'Real thumbnails from inside your packages, with categories and folders.'],
+    ['dashboard', 'Home', 'Your collection at a glance, what needs attention, and a Play button.'],
+    ['staging', 'Install Mods', 'Review releases, versions and replacements before anything moves.'],
+    ['browser', 'My Mods', 'Real thumbnails from inside your packages, with categories and folders.'],
     ['collections', 'Collections', 'Group content into collections and switch gameplay loadouts safely.'],
-    ['sort', 'Sort Manager', 'Previewable organization driven by what packages contain.'],
-    ['health', 'Collection Health', 'Evidence from inside your packages, not guesses from filenames.'],
+    ['sort', 'Organize', 'Your whole Mods folder in one clean layout, previewed first and undoable.'],
+    ['health', 'Health Details', 'Evidence from inside your packages, not guesses from filenames.'],
     ['history', 'Move History', 'Every change Prism made, with verified undo and crash recovery.'],
     ['downloads', 'Downloads', 'Bring in mods from where creators share them, with where each file came from.'],
     ['assistant', 'AI Assistant', 'Read-only help that looks at your real collection before answering.'],
