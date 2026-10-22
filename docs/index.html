@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Prism · Sims 4 Manager</title>
-<meta name="description" content="Prism is a free, open-source mod and custom-content manager for The Sims 4: safe installs with undo, evidence from inside your packages, collections, loadouts and an optional read-only AI assistant.">
+<meta name="description" content="Prism is a free, open-source mod and custom-content manager for The Sims 4: browse and update mods from CurseForge and Nexus Mods, malware checks, safe installs with undo, whole-folder organizing, themes and an optional AI assistant.">
 <meta property="og:title" content="Prism · Sims 4 Manager">
 <meta property="og:description" content="A free, open-source Sims 4 mod manager: visual, careful, and honest about what it knows.">
 <meta property="og:image" content="https://archangelaries.github.io/Prism-Sims4-Manager/screenshots/dashboard.png">
@@ -149,7 +149,7 @@
       <a class="btn primary" href="#screens">See it in action</a>
       <a class="btn" href="https://github.com/ArchAngelAries/Prism-Sims4-Manager">Follow on GitHub</a>
     </div>
-    <div class="status"><i></i>In active development · source code arrives with the first public release</div>
+    <div class="status"><i></i>1.0 release candidate · Windows installer in testing · source code arrives with the first public release</div>
     <div class="shot-hero"><img src="screenshots/dashboard.png" alt="Prism dashboard: collection overview, health, recent activity and loadout"></div>
   </div>
 </header>
@@ -178,6 +178,10 @@
       <p>Tested every day on a real collection of more than 43,000 files.</p>
     </div>
     <div class="features">
+      <div class="feature"><div class="ico"><span style="--m:url(assets/icons/search.svg);--c:var(--cyan)"></span></div><h3>Browse &amp; download</h3><p>Search CurseForge and Nexus Mods inside Prism, pick a file, and it lands in Install Mods for review. When a creator allows downloads only on their page, Prism opens it and picks the file up for you.</p></div>
+      <div class="feature"><div class="ico"><span style="--m:url(assets/icons/refresh-cw.svg);--c:var(--green)"></span></div><h3>Updates in one place</h3><p>Prism recognises your CurseForge mods from the files themselves, even old installs, and lists every update: <b>In Prism</b> (one click) or <b>On site</b>, with the game version each new file lists.</p></div>
+      <div class="feature"><div class="ico"><span style="--m:url(assets/icons/shield-check.svg);--c:var(--green)"></span></div><h3>Malware checks</h3><p>Disguised files, hidden programs, scripts that reach for passwords, known-bad files and a Windows Defender scan, plus confirmation from CurseForge or Nexus. Prism never runs a file to check it.</p></div>
+      <div class="feature"><div class="ico"><span style="--m:url(assets/icons/palette.svg);--c:var(--magenta)"></span></div><h3>27 themes, and yours</h3><p>Crystal, Neon, Gothic Vampire, Anime Sky, Cottagecore, Cartoon, Pride flags and more, each with its own animated banner. Make your own, use your installed fonts, and share themes safely.</p></div>
       <div class="feature"><div class="ico"><span style="--m:url(assets/icons/list-checks.svg);--c:var(--green)"></span></div><h3>Checkup</h3><p>One screen, plain language: what's wrong with your collection, most important first, each with one fix button. Every fix can be undone.</p></div>
       <div class="feature"><div class="ico"><span style="--m:url(assets/icons/shield-check.svg);--c:var(--amber)"></span></div><h3>Set Aside</h3><p>Take problem files out of the game without deleting them, keep the reason, and put them back any time. Only you can delete, and deleted files go to the Recycle Bin.</p></div>
       <div class="feature"><div class="ico"><span style="--m:url(assets/icons/box.svg)"></span></div><h3>Evidence over filenames</h3><p>Prism reads what's inside each package (resource types, CAS body types, embedded previews, script versions), so a "hair" file that's really a hat is filed as a hat.</p></div>
@@ -215,13 +219,13 @@
     <div class="panel">
       <div class="ico"><span style="--m:url(assets/icons/download.svg)"></span></div>
       <h3>Know where every mod came from</h3>
-      <p>Prism records the site and page behind each download, carries it into the installed mod, and checks those sources for newer files where the site allows it. It follows each site's rules: no bypassing logins, captchas, paywalls or early access.</p>
+      <p>Prism records the site and page behind each download, recognises installed CurseForge mods from their files, and checks for newer versions. It follows each site's rules and each creator's download choices: no bypassing logins, captchas, paywalls or early access.</p>
       <div class="chips">
-        <span class="chip api">Nexus Mods · official API</span>
+        <span class="chip api">CurseForge · official API: browse, download, updates</span>
+        <span class="chip api">Nexus Mods · official API, "Mod Manager Download"</span>
         <span class="chip req">Mod The Sims · on request</span>
         <span class="chip ast">The Sims Resource · in your browser</span>
         <span class="chip ast">Patreon, Tumblr &amp; more · in your browser</span>
-        <span class="chip wait">CurseForge · awaiting API approval</span>
       </div>
     </div>
     <div class="panel">
@@ -230,7 +234,7 @@
       <p>AI is optional. The assistant answers questions about your real collection; agents and stronger models can draft Mod Doctor fixes.</p>
       <ul>
         <li>Local models (LM Studio, Ollama, llama.cpp, vLLM), your own cloud keys, or agents like Claude Code and Codex.</li>
-        <li>The assistant is read-only. Agents can change files only after you turn on reviewed agent changes and approve the exact plan.</li>
+        <li>The assistant is read-only. Agents can change files only after you allow it, and you choose who approves each change: ask me every time, approve for me (Prism's own AI checks routine changes), or always approve. Risky changes always ask you.</li>
         <li>Kept honest: answers come from your real collection, Prism's built-in guide and a final check, so even small local models don't invent features or claim to have changed files.</li>
         <li>Honest about limits: fixes from small local models are often wrong. Prism rejects what it can detect and recommends stronger models for code.</li>
       </ul>
@@ -243,29 +247,27 @@
     <div class="head">
       <div class="eyebrow">Development status</div>
       <h2>Where Prism is today</h2>
-      <p>Prism runs on Windows (Python with Qt Quick). The code will be published here, under the GPL, with the first public release.</p>
+      <p>Prism runs on Windows (Python with Qt Quick) and installs with a normal Windows installer. The code will be published here, under the GPL, with the first public release.</p>
     </div>
     <div class="road">
       <div class="col"><h3><i class="dot" style="background:var(--green)"></i>Working now</h3><ul>
+        <li>Browse, download and update from CurseForge and Nexus Mods</li>
+        <li>Malware checks on every download, without running anything</li>
         <li>Installs and updates with undo, straight into your layout</li>
         <li>Organize the whole Mods folder, tested on a real 43,000-file collection</li>
-        <li>Sim and lot downloads that keep your CC and sliders intact</li>
-        <li>Checkup with one-click fixes, and Set Aside for problem files</li>
-        <li>Mod Browser, Collections, Loadouts and pictures</li>
+        <li>Checkup, Set Aside and Find the Culprit</li>
         <li>Missing requirements, Mod Doctor and game update impact</li>
-        <li>Opt-in in-game probe: which script mods really loaded</li>
-        <li>Downloads with source tracking; Nexus Mods integration</li>
-        <li>AI assistant (local or cloud) and agent tools for every feature</li></ul></div>
+        <li>27 themes with animated banners, custom and shareable themes</li>
+        <li>AI assistant (local or cloud) and agents with approval you control</li>
+        <li>Windows installer (1.0 release candidate)</li></ul></div>
       <div class="col"><h3><i class="dot" style="background:var(--amber)"></i>In progress</h3><ul>
-        <li>Evidence-driven "find the culprit" troubleshooting</li>
-        <li>Main-menu probe and interface-override checks</li>
-        <li>More layout choices (simple, granular, keep mine)</li>
-        <li>CurseForge integration (pending approval)</li>
-        <li>Speed: faster first checks on huge collections</li></ul></div>
+        <li>In-game testing of the probe</li>
+        <li>Sign in with Nexus Mods (app registration)</li>
+        <li>More theme families and Theme Studio</li></ul></div>
       <div class="col"><h3><i class="dot" style="background:var(--violet)"></i>Next</h3><ul>
-        <li>Windows installer and first public release</li>
+        <li>First public release, with source code</li>
         <li>Previews for CC that ships without one</li>
-        <li>Animated, polished look</li></ul></div>
+        <li>More layout choices</li></ul></div>
     </div>
   </div>
 </section>
@@ -292,15 +294,19 @@
 <script>
   const shots = [
     ['dashboard', 'Home', 'Your collection at a glance, what needs attention, and a Play button.'],
+    ['downloads', 'Browse Mods', 'Search CurseForge and Nexus Mods inside Prism; downloads go to Install Mods for review.'],
+    ['updates', 'Updates', 'Every update in one place: in Prism or on the site, with the game version each file lists.'],
+    ['themes', 'Themes', '27 built-in looks, your own themes, installed fonts, and safe theme sharing.'],
+    ['theme-gothic-vampire', 'Gothic Vampire', 'One of the themes, with its own banner and finishes.'],
+    ['theme-cottagecore', 'Cottagecore', 'A light theme with its own art.'],
     ['staging', 'Install Mods', 'Review releases, versions and replacements before anything moves.'],
     ['browser', 'My Mods', 'Real thumbnails from inside your packages, with categories and folders.'],
     ['collections', 'Collections', 'Group content into collections and switch gameplay loadouts safely.'],
     ['sort', 'Organize', 'Your whole Mods folder in one clean layout, previewed first and undoable.'],
     ['health', 'Health Details', 'Evidence from inside your packages, not guesses from filenames.'],
     ['history', 'Move History', 'Every change Prism made, with verified undo and crash recovery.'],
-    ['downloads', 'Downloads', 'Bring in mods from where creators share them, with where each file came from.'],
     ['assistant', 'AI Assistant', 'Read-only help that looks at your real collection before answering.'],
-    ['tools', 'Tools & Utilities', 'Inspectors, maintenance and the external apps you already use.'],
+    ['tools', 'Tools & Utilities', 'Error logs, Mod Doctor, duplicates, backups and maintenance.'],
     ['checkup', 'Checkup', 'What\'s wrong with your collection, in plain language, with one-click fixes.'],
     ['set-aside', 'Set Aside', 'Problem files out of the game, kept with the reason, ready to put back.'],
     ['mod-doctor', 'Mod Doctor', 'A broken script mod, explained in plain language, with a fix you approve once and can undo.'],
